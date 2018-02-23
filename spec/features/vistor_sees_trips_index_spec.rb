@@ -8,7 +8,7 @@ describe "visitor navigates to trips index" do
     visit trips_path
     click_on trip.name
 
-    expect(current_path).to be(trip_path(trip))
+    expect(current_path).to eq(trip_path(trip))
     expect(page).to have_content(trail.name)
     expect(page).to have_content(trail.address)
     expect(page).to have_content(trail.length)
