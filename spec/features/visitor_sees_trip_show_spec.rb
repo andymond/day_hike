@@ -9,5 +9,8 @@ describe "visitor visits trip show" do
     visit trip_path(trip)
 
     expect(page).to have_content(trip.total_length)
+    expect(page).to have_content(trip.avg_length)
+    expect(page).to have_content(trip.longest_length)
+    expect(page).to have_content(trip.shortest_length)
   end
 end

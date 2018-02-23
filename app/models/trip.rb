@@ -4,4 +4,5 @@ class Trip < ApplicationRecord
   def total_length
     trails.sum(:length)
   end
+
 end
